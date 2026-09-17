@@ -1,0 +1,17 @@
+<h1>Accounts</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    {% for account in accounts %}
+    <tr>
+        <td>{{ account.BankName }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<form method="POST">
+    <input type="text" name="BankName" placeholder="Account name" required>
+    <button type="submit">Add Account</button>
+</form>

@@ -15,22 +15,32 @@ CSV_MAPPINGS = {
         "headers" : ["Details", "Posting Date", "Description", "Amount", "Type", "Balance", "Check or Slip #"],
         "date_column" : "Posting Date",
         "merchant_column" : "Description",
-        "account_column" : "Amount",
-        "invert_amount" : False
+        "amount_column" : "Amount",
+        "invert_amount" : False,
+        "exclude_merchants" : [
+            "AMERICAN EXPRESS ACH PMT",
+            "CAPITAL ONE      MOBILE PMT",
+            "UNIVERSITY OF SO PAYROLL",
+            "ZELLE PAYMENT TO MARIA",
+        ],
     },
     "amex" : {
         "headers" : ["Date", "Description", "Amount"],
         "date_column" : "Date",
         "merchant_column" : "Description",
-        "account_column" : "Amount",
-        "inverted_amount" : True, 
+        "amount_column" : "Amount",
+        "invert_amount" : True, 
     },
     "schoolsfirst" : {
         "headers" : ["Date", "Description", "Check#", "Category", "Currency", "Amount", "Balance"],
         "date_column" : "Date",
         "merchant_column" : "Description",
-        "account_column" : "Amount",
+        "amount_column" : "Amount",
         "invert_amount" : False,
+        "exclude_merchants" : [
+            "CAPITAL ONE",
+            "AMERICAN EXPRESS CREDIT CARD",
+        ],
     },
 }
 

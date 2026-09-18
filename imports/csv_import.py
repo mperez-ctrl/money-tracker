@@ -37,6 +37,7 @@ def import_csv(file_path, account_id):
 
         imported_count = 0
         skipped_count = 0
+        excluded_count = 0
 
         for row in reader:
             date_str = row[format_info["date_column"]].strip()
@@ -45,6 +46,12 @@ def import_csv(file_path, account_id):
 
             date = parse_date(date_str)
             merchant = row[format_info["merchant_column"]].strip()
+
+            exclude_list = format_info.get("exclude_merchants", [])
+            merchant_upper = merchant.upper()
+            if any(pattern.upper() in merchant_upper for pattern in exclude_list):
+                excluded_count += 1
+                continue
 
             if "debit_column" in format_info:
                 debit = row[format_info["debit_column"]].strip().replace(",","")
@@ -57,8 +64,8 @@ def import_csv(file_path, account_id):
                     continue
             else:
                 amount_str = row[format_info["amount_column"]].strip().replace(",","")
-                amount = Decimal(str)
-                if format_info.get("inverted_amount"):
+                amount = Decimal(amount_str)
+                if format_info.get("invert_amount"):
                     amount = -amount
 
             key = (date, merchant, amount)
@@ -69,5 +76,5 @@ def import_csv(file_path, account_id):
             category_id, subcategory_id = auto_categorize(merchant)
             add_transaction(account_id, date, merchant, amount, category_id, subcategory_id)
             imported_count += 1
-    return imported_count, skipped_count
+    return imported_count, skipped_count, excluded_count
 

@@ -28,7 +28,7 @@ class MainWindow(QWidget):
             return
 
         try:
-            imported, skipped = import_csv(file_path, account_id)
+            imported, skipped, excluded = import_csv(file_path, account_id)
         except ValueError as e:
             QMessageBox.warning(self, "Import Error", str(e))
             return

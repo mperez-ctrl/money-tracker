@@ -17,15 +17,15 @@ def get_accounts():
 
     return rows
 
-def add_account(BankName):
+def add_account(AccountName):
     """
     Inserts a new row into the Accounts table
     """
     conn = get_connection()
     cursor = conn.cursor()
     cursor.execute(
-        "INSERT INTO Accounts (BankName) VALUES (?)",
-        BankName
+        "INSERT INTO Accounts (AccountName) VALUES (?)",
+        AccountName
     )
     conn.commit()
     conn.close()

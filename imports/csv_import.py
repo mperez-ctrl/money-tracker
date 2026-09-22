@@ -3,7 +3,7 @@ from datetime import datetime
 from decimal import Decimal
 from imports.csv_mappings import CSV_MAPPINGS, detect_format
 from imports.merchant_rules import auto_categorize
-from queries.transactions import get_transactions_for_account, add_transaction
+from queries.transactions import get_transactions_for_account, add_transaction, get_pay_period_week
 
 def parse_date(date_str):
     for fmt in ("%Y-%m-%d", "%m/%d/%Y"):
@@ -74,7 +74,12 @@ def import_csv(file_path, account_id):
                 continue
 
             category_id, subcategory_id = auto_categorize(merchant)
-            add_transaction(account_id, date, merchant, amount, category_id, subcategory_id)
+            if category_id is None:
+                category_id = 13 # Uncategorized
+
+            pay_period_week = get_pay_period_week(date)
+
+            add_transaction(account_id, date, merchant, amount, category_id, subcategory_id, pay_period_week)
             imported_count += 1
     return imported_count, skipped_count, excluded_count
 

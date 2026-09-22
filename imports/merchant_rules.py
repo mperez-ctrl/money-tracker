@@ -11,6 +11,7 @@ merchant_rules = [
     ## 1	2	Internet
     ("wi-fi", 1, 2),
     ("ATT              PAYMENT", 1, 2),
+    ("AT&T", 1, 2),
     ## 1	3	Electricity
     ## 1	4	Gas Utility
     ## 1	5	Home Insurance
@@ -26,35 +27,11 @@ merchant_rules = [
     ("COFFEE", 2, 7),
     ("CAFE", 2, 7),
     ("NATURES BREW", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
     ## 2	8	Fast Food
-    ("PANDA EXPRESS", 2, 8),
-    ("MCDONALD'S", 2, 8),
-    ("EL POLLO LOCO", 2, 8),
-    ("POPEYES", 2, 8),
     ("TAQUERIA", 2, 8),
     ("TACOS", 2, 8),
-    ("ROCK AND REILLYS", 2, 8),
-    ("CPI*UNIVERSITY", 2, 8),
-    ("USC HOSP", 2, 8),
-    ("", 2, 8),
-    ("", 2, 8),
     ## 2	9	Restaurants
-    ("NICKS SOUTH LAKE AVE", 2, 9),
-    ("PALENQUE KITCHEN", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
+    ("AMEX RESY CREDIT", 2, 9),
     ## 2	10	Food Delivery
     ("grubhub", 2, 10),
 
@@ -67,7 +44,6 @@ merchant_rules = [
     ## 3	12	Parking
     ("PARKING", 3, 12),
     ("GARAGE", 3, 12),
-    ("USC TRANSP", 3, 12),
     ## 3	13	Ride Share
     ("LYFT", 3, 13),
     ## 3	14	Public Transit
@@ -81,13 +57,11 @@ merchant_rules = [
 
     # ------------ Health & Wellness ------------ 
     ## 4	18	Doctor Visits
-    ("KECKMED", 4, 18),
     ## 4	19	Pharmacy/Medications
     ("CVS PHARMACY", 4, 19),
     ("www.cvs.com", 4, 19),
     ## 4	20	Urgent Care
     ## 4	21	Mental Health
-    ("RULA HEALTH", 4, 21),
     ## 4	22	Fitness Memberships
     ("LA Fitness", 4, 22),
     ("LAMUAYTHAI", 4, 22),
@@ -96,7 +70,7 @@ merchant_rules = [
     ## 5	23	Pet Insurance
     ("METLIFE PET", 5, 23),
     ## 5	24	Pet Food
-    ("chewy", 5, 24),
+    ("chewy.com", 5, 24),
     ("petco", 5, 24),
     ## 5	25	Veterinary Care
 
@@ -109,11 +83,12 @@ merchant_rules = [
     ("TIKTOK SHOP", 6, 26),
     ## 6	27	Beauty & Personal Care
     ("HELLO SUGAR", 6, 27),
-    ("ZEN MASSAGE", 6, 27),
+    ("MASSAGE", 6, 27),
     ("ULTA", 6, 27),
     ("GARIMA S BROWS", 6, 27),
     ("NAIL SALON", 6, 27),
     ## 6	28	Home Goods
+    ("AMAZON MARKETPLACE", 6, 28),
     ("AMAZON MARKEPLACE", 6, 28),
     ("IKEA", 6, 28),
     ## 6	29	Electronics
@@ -126,6 +101,7 @@ merchant_rules = [
     ("patreon", 7, 32),
     ("HBO Max", 7, 32),
     ("PEACOCK", 7, 32),
+    ("Amazon Prime", 7, 32),
     ## 7	33	Movies 
     ("AMC",7,33),
     ## 7	34	Activities & Events
@@ -148,6 +124,7 @@ merchant_rules = [
     # -------------- 10	Debt & Fees -------------- 
     ## 10	40	Credit Card Payment
     ("CAPITAL ONE MOBILE PYMT", 10, 40),
+    ("CAPITAL ONE ONLINE PYMT", 10, 40),
     ("MOBILE PAYMENT - THANK YOU", 10, 40),
     ## 10	41	Student Loan Payment
     ("Department of Education", 10, 41),

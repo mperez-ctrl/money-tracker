@@ -19,6 +19,7 @@ CSV_MAPPINGS = {
         "invert_amount" : False,
         "exclude_merchants" : [
             "AMERICAN EXPRESS ACH PMT",
+            "CAPITAL ONE      ONLINE PMT",
             "CAPITAL ONE      MOBILE PMT",
             "UNIVERSITY OF SO PAYROLL",
             "ZELLE PAYMENT TO MARIA",

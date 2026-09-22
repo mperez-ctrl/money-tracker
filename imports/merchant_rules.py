@@ -26,13 +26,6 @@ merchant_rules = [
     ("COFFEE", 2, 7),
     ("CAFE", 2, 7),
     ("NATURES BREW", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
-    ("", 2, 7),
     ## 2	8	Fast Food
     ("PANDA EXPRESS", 2, 8),
     ("MCDONALD'S", 2, 8),
@@ -43,18 +36,9 @@ merchant_rules = [
     ("ROCK AND REILLYS", 2, 8),
     ("CPI*UNIVERSITY", 2, 8),
     ("USC HOSP", 2, 8),
-    ("", 2, 8),
-    ("", 2, 8),
     ## 2	9	Restaurants
     ("NICKS SOUTH LAKE AVE", 2, 9),
     ("PALENQUE KITCHEN", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
-    ("", 2, 9),
     ## 2	10	Food Delivery
     ("grubhub", 2, 10),
 
